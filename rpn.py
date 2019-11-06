@@ -13,6 +13,16 @@ def calculate(s):
             s1 = stack.pop()
             result = s1 - s2
             stack.append(result)
+        elif token == '*':
+            s2 = stack.pop()
+            s1 = stack.pop()
+            result = s1 * s2
+            stack.append(result)
+        elif token == '/':
+            s2 = stack.pop()
+            s1 = stack.pop()
+            result = s1 / s2
+            stack.append(result)
         else:
             stack.append((int(token)))
     if (len(stack)) != 1:                                                                                           
